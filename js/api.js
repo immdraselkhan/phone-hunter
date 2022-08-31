@@ -21,8 +21,8 @@ const getPhones = (phones, dataLimit) => {
         phones = phones.slice(0, 12);
         document.getElementById('view-all').classList.remove('hidden');
         document.getElementById('view-all').children[0].addEventListener('click', function() {
-            getPhones (allPhones, false);
             document.getElementById('view-all').classList.add('hidden');
+            getPhones (allPhones, false);
         });
     };
     document.getElementById('phones-container').innerHTML = '';
