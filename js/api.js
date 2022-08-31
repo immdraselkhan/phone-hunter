@@ -53,20 +53,18 @@ const displaySlug = moreInfo => {
     document.getElementById('modal-box').innerHTML = '';
     const {brand, name, releaseDate} = moreInfo;
     const {displaySize, memory, storage} = moreInfo.mainFeatures;
-    const [...sensors] = moreInfo.mainFeatures.sensors;
     const addModal = `
         <div class="w-[90%] sm:w-2/4 max-w-sm sm:max-w-screen-sm bg-white rounded">
             <div class="flex justify-between items-center border-b mt-2 px-8 py-3">
                 <h3 class="text-xl font-semibold">${name}</h3>
                 <button onclick="closeModal()" type="button" class="text-white px-3 py-1.5 bg-blue-700 hover:bg-blue-800 rounded">Close</button>
             </div>
-            <div class="text-lg font-semibold mb-2 px-8 py-5">
-                <p>Brand: ${brand}</p>
-                <p>Release Date: ${releaseDate}</p>
-                <p>Release Date: ${displaySize}</p>
-                <p>Release Date: ${memory}</p>
-                <p>Release Date: ${storage}</p>
-                <p>Sensors: ${sensors}</p>
+            <div class="text-md mb-2 px-8 py-5 space-y-3">
+                <p><span class="font-bold">Brand:</span> ${brand}</p>
+                <p><span class="font-bold">Release Date:</span> ${releaseDate}</p>
+                <p><span class="font-bold">Display Size:</span> ${displaySize}</p>
+                <p><span class="font-bold">RAM:</span> ${memory}</p>
+                <p><span class="font-bold">ROM:</span> ${storage}</p>
             </div>
         </div>
     `;
